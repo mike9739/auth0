@@ -8,6 +8,7 @@ import { PreciosComponent } from './components/precios/precios.component';
 import { ProtegidaComponent } from './components/protegida/protegida.component';
 import { app_routing } from './routes';
 import { AuthService } from './services/auth.service';
+import { AuthGuardService } from './services/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { AuthService } from './services/auth.service';
     BrowserModule,
     app_routing
   ],
-  providers: [AuthService],
+  providers: [AuthService,AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
